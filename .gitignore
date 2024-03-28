@@ -16,3 +16,9 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+application.yml
+src/main/resources/application.yml
+src/main/resources/application.yml
+bin/main/application.yml
+*.yml
