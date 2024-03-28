@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.gsohz.sdw24.application.AskChampionUseCase;
 import com.gsohz.sdw24.application.ListChampionsUseCase;
 import com.gsohz.sdw24.domain.ports.ChampionsRepository;
 
@@ -19,4 +20,8 @@ public class SantanderDevWeek2024Application {
 		return new ListChampionsUseCase(repository);
 	}
 
+    @Bean
+    AskChampionUseCase provideAskChampionUseCase(ChampionsRepository repository) {
+		return new AskChampionUseCase(repository);
+	}
 }
