@@ -2,6 +2,7 @@ package com.gsohz.sdw24.adapters.in;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping("/champions")
 public record ListChampionsRestController(ListChampionsUseCase useCase) {
+	@CrossOrigin
 	@GetMapping
 	public List<Champions> findAllChampions(){
 		return useCase.findAll();

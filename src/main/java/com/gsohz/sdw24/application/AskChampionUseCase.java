@@ -19,9 +19,7 @@ public record AskChampionUseCase(ChampionsRepository repository, GenerativeAiSer
 				
 				""";
 		
-		genAiApi.generateContent(objective, context);
-		
-		return context;
+		return genAiApi.generateContent(objective, context);
 	}
 	
 }
